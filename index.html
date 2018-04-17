@@ -166,21 +166,17 @@
             <ul class="flexblock reasons">
               <li>
                 <h2>
-                  Good to Great UI Tips
+
                 </h2>
-                <p>Practical suggestions to improve your UI micro-interactions</p>
+                </p>
               </li>
               <li>
-                <h2>Timeline</h2>
-                <p>Use an element to trigger another element's animation using the animation timeline</p>
+                <h2></h2>
+                <p></p>
               </li>
               <li>
-                <h2>Assorted Tips</h2>
-                <p>Know about Greensock's splitText plugin, drawSVG plugin, canvas element</p>
-              </li>
-              <li>
-                <h2>Adobe Animate</h2>
-                <p>Adobe Animate's motion path</p>
+                <h2></h2>
+                <p></p>
               </li>
             </ul>
           </div>
@@ -188,6 +184,176 @@
         </div>
         <!-- .end .wrap -->
       </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap aligncenter">
+          <h2>Why Sprites?</h2>
+          <p class="text-intro">It enables you to break up an animation into steps (
+            <a href="./static/images/flipbook.gif">think flipbooks</a>), rather than the usual tweened motion that we’re used to.</p>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-70">
+          <blockquote class="text-quote">
+            <p>Sprite animations are typically used for small, animated embellishments in web interfaces.</p>
+            <p>
+              <cite>
+                <img class="avatar-56" src="https://pbs.twimg.com/profile_images/669650293747900416/GApkPcFY_bigger.jpg" alt="Avatar">Val Head.
+                <br/>
+                <a href="https://www.lynda.com/MyPlaylist/Watch/15095804/461538?autoplay=true">CSS: Animation with Val Head</a>
+              </cite>
+            </p>
+          </blockquote>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap aligncenter">
+          <h2>Timing Function Values</h2>
+          <ul class="flexblock features">
+            <li>linear</li>
+            <li>ease-in</li>
+            <li>ease-out</li>
+            <li>ease-in-out</li>
+            <li style="background-color:lime; color: black">steps</li>
+            <li>cubic-bezier</li>
+          </ul>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <style scoped>
+                #green1 {
+                  transition: 3s linear;
+                }
+
+                #blue1 {
+                  transition: 3s steps(3);
+                }
+
+                #green1:active,
+                #blue1:active {
+                  transform: translateX(300px);
+                }
+              </style>
+              <div style="background: #333; padding: 33px">
+                <div id="green1" style="height: 100px; width: 100px; background: green; margin: 10px;"></div>
+                <div id="blue1" style="height: 100px; width: 100px; background: lightblue;  margin: 10px;"></div>
+              </div>
+
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Easing comparison - linear vs steps
+              </h3>
+              <pre><code><h4>
+#green { 
+  transition: 3s linear;
+}
+
+#blue {
+  transition: 3s steps(3);
+}
+
+#green:active, #blue:active {
+  transform: translateX(300px);
+}
+  </h4></code></pre>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <style scoped>
+                #green2 {
+                  transition: 3s steps(3, start);
+                }
+
+                #blue2 {
+                  transition: 3s steps(3, end);
+                }
+
+                #green2:active,
+                #blue2:active {
+                  transform: translateX(300px);
+                }
+              </style>
+              <div style="background: #333; padding: 33px">
+                <div id="green2" style="height: 100px; width: 100px; background: green; margin: 10px;"></div>
+                <div id="blue2" style="height: 100px; width: 100px; background: lightblue;  margin: 10px;"></div>
+              </div>
+              <br>
+              <input type="range">
+              <input type="range">
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                start vs end
+              </h3>
+              <pre><code><h4>
+  #green { 
+    transition: 3s steps(3, start);
+  }
+  
+  #blue {
+    transition: 3s steps(3, end);
+  }
+  
+  #green:active, #blue:active {
+    transform: translateX(300px);
+  }
+    </h4></code></pre>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -199,13 +365,13 @@
           <div class="bg-white shadow">
             <ul class="flexblock reasons">
               <li>
-                Learned how to make good UIs better using 'good to great' animation principles
+
               </li>
               <li>
-                Learned how to make one element trigger another element's animation within Webflow
+
               </li>
               <li>
-                Created/edited motion paths using Adobe Animate
+
               </li>
             </ul>
           </div>
@@ -252,7 +418,7 @@
           <li>https://www.smashingmagazine.com/2014/04/understanding-css-timing-functions/#introducing-the-steps-timing-function</li>
           <li>lynda.com - CSS animation with Val Head</li>
           <li>lynda.com - Motion Design with CSS with Rachel Nabors</li>
-          <li></li>
+          <li>https://medium.com/@chrismabry/how-did-they-do-that-the-twitter-like-animation-2a473b658e43</li>
           <li></li>
           <li></li>
           <li></li>
