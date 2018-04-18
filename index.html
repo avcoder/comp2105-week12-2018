@@ -275,7 +275,10 @@
           <h2>steps(x)</h2>
           <p class="text-intro">steps(x) is a timing function that splits a block of keyframes into x equal steps, then hops between them.</p>
           <img src="./static/images/steps.png" alt="steps divide the animation duration into equal parts">
-
+          <br>
+          <br>
+          <p>it cycles through each snapshot or frame, pausing on each based on how many steps you divided your total duration
+            into. So instead of continuous motion, your animation is divided into a series of holds</p>
         </div>
         <!-- .end .wrap -->
       </section>
@@ -748,6 +751,66 @@
         <!-- .end .wrap -->
       </section>
 
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="Rywqeo" data-default-tab="result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="sprite  using animation keyframes" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/Rywqeo/">sprite using animation keyframes</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Use steps() with animation keyframes
+              </h3>
+              <p class="text-intro">Using the steps() function, animate the given sprite.</p>
+              <p>
+                <a href="./static/images/walker_frames.png">See Example</a>
+              </p>
+              <pre><code><h4>
+.sprite {
+  animation: walker 1s infinite steps(10);
+}
+
+@keyframes walker {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -5000px; }
+}
+                            </h4></code></pre>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-70">
+          <blockquote class="text-quote">
+            <p> Notice how each frame is shown with no transition or easing in between. It's just a hard cut and hold to the
+              next frame. The continuity of the animation is a result of how closely each frame is drawn to the one before
+              it, and the tendency of our eyes and brain to want to make things appear to be moving smoothly. It's a pretty
+              neat effect
+            </p>
+            <p>
+              <cite>
+                <img class="avatar-56" src="https://pbs.twimg.com/profile_images/669650293747900416/GApkPcFY_bigger.jpg" alt="Avatar">Val Head.
+                <br/>
+                <a href="https://www.lynda.com/MyPlaylist/Watch/15095804/461538?autoplay=true">CSS: Animation with Val Head</a>
+              </cite>
+            </p>
+          </blockquote>
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
 
 
