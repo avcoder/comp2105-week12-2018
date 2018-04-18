@@ -221,7 +221,7 @@
             <li>ease-in</li>
             <li>ease-out</li>
             <li>ease-in-out</li>
-            <li style="background-color:lime; color: black">steps</li>
+            <li style="color:lime">steps</li>
             <li>cubic-bezier</li>
           </ul>
         </div>
@@ -236,11 +236,11 @@
             <div class="column">
               <style scoped>
                 #green1 {
-                  transition: 3s linear;
+                  transition: transform 3s linear;
                 }
 
                 #blue1 {
-                  transition: 3s steps(3);
+                  transition: transform 3s steps(3);
                 }
 
                 #green1:active,
@@ -261,11 +261,11 @@
               </h3>
               <pre><code><h4>
 #green { 
-  transition: 3s linear;
+  transition: transform 3s linear;
 }
 
 #blue {
-  transition: 3s steps(3);
+  transition: transform 3s steps(3);
 }
 
 #green:active, #blue:active {
@@ -290,11 +290,11 @@
             <div class="column">
               <style scoped>
                 #green2 {
-                  transition: 3s steps(3, start);
+                  transition: transform 3s steps(3, start);
                 }
 
                 #blue2 {
-                  transition: 3s steps(3, end);
+                  transition: transform 3s steps(3, end);
                 }
 
                 #green2:active,
@@ -337,9 +337,141 @@
         <!-- .end .wrap -->
       </section>
 
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <div id="green3" style="height: 100px; border: 2px solid green; background: url('./static/images/twitter_like_heart_animation.png'); padding: 33px">
+              </div>
+              <input type="range" id="like" value="0" min="0" max="2800" step="100" oninput="moveme(value)">
+              <br>
+              <button id="like1">Make width 100px</button>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                twitter like animation
+              </h3>
+              <p class="text-intro">
+                <a href="./static/images/twitter_like_heart_animation.png">Image file that twitter uses for Like button</a>
+              </p>
+              <pre><code><h4>
+#green { ...
+  background: url('twitter_like.png');
+  background-position: <span id="xvalue">0px 0px</span>;
+}
+
+      </h4></code></pre>
+              <script>
+                const el = document.getElementById('green3');
+                const xval = document.getElementById('xvalue');
+
+                function moveme(val) {
+                  el.style.backgroundPosition = `-${val}px 0px`;
+                  xval.textContent = `-${val}px 0px`;
+                }
+                $('#like1').click(function () {
+                  $('#green3').css("width", "100px");
+                });
+              </script>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <style scoped>
+                #green4 {
+                  background: url('./static/images/twitter_like_heart_animation.png') 0px 0px;
+                  transition: 1s steps(28);
+                }
+
+                #green4:active {
+                  background-position: -2800px 0px;
+                }
+              </style>
+
+              <div id="green4" style="margin: 0 auto; height: 100px; width: 100px; border: 2px solid green; padding: 33px"></div>
+
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Using steps() to move background-position
+              </h3>
+              <p class="text-intro">
+                <a href="./static/images/twitter_like_heart_animation.png">Image file that twitter uses for Like button</a>
+              </p>
+              <pre><code><h4>
+#green { 
+  background: url('like.png') 0px 0px;
+  transition: 1s steps(28);
+}
+
+#green:active {
+  background-position: -2800px 0px;
+}
+        </h4></code></pre>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
 
 
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="Yaazxg" data-default-tab="result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="twitter sprite" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/Yaazxg/">twitter sprite</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Implement Twitter's Like animation
+              </h3>
+              <p class="text-intro">Using the steps() function, animate the given sprite.</p>
+              <p>
+                <a href="./static/images/twitter.gif">See Example</a>
+              </p>
+              <pre><code><h4>
+#green { 
+  background: url('like.png') 0px 0px;
+  transition: 1s steps(28);
+}
+
+#green:active {
+  background-position: -2800px 0px;
+}
+                          </h4></code></pre>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
 
 
