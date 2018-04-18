@@ -236,7 +236,10 @@
         <!--.wrap = container (width: 90%) -->
         <div class="wrap size-70">
           <blockquote class="text-quote">
-            <p>Sprite animations are typically used for small, animated embellishments in web interfaces.</p>
+            <p>Sprite animations are best for small, animated embellishments in web interfaces... Typically, these animations
+              will be created first in animation software like After Effects or even drawn frame-by-frame in something like
+              Illustrator
+            </p>
             <p>
               <cite>
                 <img class="avatar-56" src="https://pbs.twimg.com/profile_images/669650293747900416/GApkPcFY_bigger.jpg" alt="Avatar">Val Head.
@@ -261,6 +264,18 @@
             <li style="color:lime">steps</li>
             <li>cubic-bezier</li>
           </ul>
+          <p class="text-intro">Steps divide the animation duration into equal parts</p>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap aligncenter">
+          <h2>steps(x)</h2>
+          <p class="text-intro">steps(x) is a timing function that splits a block of keyframes into x equal steps, then hops between them.</p>
+          <img src="./static/images/steps.png" alt="steps divide the animation duration into equal parts">
+
         </div>
         <!-- .end .wrap -->
       </section>
@@ -379,6 +394,100 @@
         <div class="wrap">
           <div class="grid vertical-align">
 
+            <div class="column" style="width: 10% !important;">
+              <style scoped>
+                #green2b {
+                  background-color: green;
+                  transition: background-color 3s steps(3);
+                }
+
+
+                #green2b:hover {
+                  background-color: yellow;
+                }
+              </style>
+              <div style="background: #333; padding: 33px">
+                <div id="green2b" style="height: 100px; width: 100px; margin: 10px;"></div>
+
+              </div>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                More steps() examples
+              </h3>
+              <p class="text-intro">Try changing: color</p>
+              <pre><code><h4>
+#green {
+  background-color: green;
+  transition: background-color 3s steps(3);
+}
+
+#green:hover {
+  background-color: yellow;
+}
+      </h4></code></pre>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column" style="width: 10% !important;">
+              <style scoped>
+                #blue2b {
+                  transition: background-position 3s steps(3);
+                  background: url('./static/images/graphics.png') 0px 0px;
+                }
+
+                #blue2b:hover {
+                  background-position: 0px -300px;
+                }
+              </style>
+              <div style="background: #333; padding: 33px">
+                <div id="blue2b" style="height: 100px; width: 100px;  margin: 10px;"></div>
+              </div>
+              <a href="./static/images/graphics.png">graphics.png</a>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                More steps() examples
+              </h3>
+              <p class="text-intro">Try changing: background-position</p>
+              <pre><code><h4>
+#blue {
+  transition: background-position 3s steps(3);
+  background: url('graphics.png') 0px 0px;
+}
+
+#blue:hover {
+  background-position: 0px -300px;
+}
+        </h4></code></pre>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
             <div class="column">
               <div id="green3" style="height: 100px; border: 2px solid green; background: url('./static/images/twitter_like_heart_animation.png'); padding: 33px">
               </div>
@@ -459,6 +568,80 @@
   background-position: -2800px 0px;
 }
         </h4></code></pre>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section class="bg-apple">
+        <div class="wrap">
+          <div class="card-50">
+            <figure>
+              <img src="./static/images/filmmachine.jpg" alt="film machine">
+            </figure>
+            <figure>
+              <img src="./static/images/film_reel.jpg" alt="film reel">
+            </figure>
+
+            <div class="flex-content">
+              <h2>
+                Film Reels
+              </h2>
+
+              <p class="text-intro">
+                <a href="./static/images/filmclatter.gif">Remember film stutter?</a>
+              </p>
+            </div>
+            <!-- end .flex-content Credit: http://minyos.its.rmit.edu.au/aim/a_notes/anim_principles.html -->
+          </div>
+          <!-- end .card-50 Credit: http://the12principles.tumblr.com/ -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <style scoped>
+                #green5 {
+                  background: url('./static/images/twitter_like_heart_animation.png') 0px 0px;
+                  transition: 1s steps(29);
+                }
+
+                #green5:active {
+                  background-position: -2800px 0px;
+                }
+              </style>
+
+              <div id="green5" style="margin: 0 auto; height: 100px; width: 100px; border: 2px solid green; padding: 33px"></div>
+
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Mismatched frames vs steps
+              </h3>
+              <p class="text-intro">
+                <a href="./static/images/twitter_like_heart_animation.png">Image file that twitter uses for Like button</a>
+              </p>
+              <pre><code><h4>
+  #green { 
+    background: url('like.png') 0px 0px;
+    transition: 1s steps(29);
+  }
+  
+  #green:active {
+    background-position: -2800px 0px;
+  }
+          </h4></code></pre>
 
             </div>
             <!-- .end .column -->
