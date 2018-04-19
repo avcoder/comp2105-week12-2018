@@ -492,11 +492,13 @@
           <div class="grid vertical-align">
 
             <div class="column">
+              <p class="text-intro">How many frames does this sprite have? What is the size of each frame?</p>
               <div id="green3" style="height: 100px; border: 2px solid green; background: url('./static/images/twitter_like_heart_animation.png'); padding: 33px">
               </div>
               <input type="range" id="like" value="0" min="0" max="2800" step="100" oninput="moveme(value)">
               <br>
               <button id="like1">Make width 100px</button>
+
             </div>
             <!-- .end .column -->
             <div class="column">
@@ -513,6 +515,7 @@
 }
 
       </h4></code></pre>
+              <p>Try viewing animation using your own twitter account</p>
               <script>
                 const el = document.getElementById('green3');
                 const xval = document.getElementById('xvalue');
@@ -808,6 +811,74 @@
               </cite>
             </p>
           </blockquote>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="zeFqy" data-default-tab="css,result" data-user="rachelnabors" data-embed-version="2"
+                data-pen-title="steps() gotchas in CSS3 animations" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/rachelnabors/pen/zeFqy/">steps() gotchas in CSS3 animations</a> by Rachel Nabors (
+                <a href="https://codepen.io/rachelnabors">@rachelnabors</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Some steps() gotcha's
+              </h3>
+              <p class="text-intro">Rachel Nabors has documented some interested side effects when using steps()</p>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="qYBgBp" data-default-tab="result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="DIY Catwalk(cycle)" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/qYBgBp/">DIY Catwalk(cycle)</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Make a walk-cycle of this cat
+              </h3>
+              <p class="text-intro">You have
+                <a href="http://avillaruz.computerstudi.es/comp2105/">5 minutes</a> to try using the steps() function, animate the given sprite.</p>
+              <p>
+                <a href="http://stash.rachelnabors.com/animation-workshop/sprite_catwalk.png">See sprite</a>
+              </p>
+              <pre><code><h4>
+.sprite {
+  animation: walker 1s infinite steps(10);
+}
+
+@keyframes walker {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -5000px; }
+}
+              </h4></code></pre>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
         </div>
         <!-- .end .wrap -->
       </section>
